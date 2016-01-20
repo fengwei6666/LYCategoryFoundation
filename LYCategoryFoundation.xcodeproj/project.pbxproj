@@ -6,7 +6,23 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		EF9FA2D21C00C54F00DB4CCB /* LYCategoryKit */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = EF9FA2D51C00C54F00DB4CCB /* Build configuration list for PBXAggregateTarget "LYCategoryKit" */;
+			buildPhases = (
+				EF9FA2D61C00C56400DB4CCB /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = LYCategoryKit;
+			productName = LYCategoryKit;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
+		EF696C0B1C4F66DB002CE03F /* UIButton+Dictronary.h in Headers */ = {isa = PBXBuildFile; fileRef = EF696C091C4F66DB002CE03F /* UIButton+Dictronary.h */; };
+		EF696C0C1C4F66DB002CE03F /* UIButton+Dictronary.m in Sources */ = {isa = PBXBuildFile; fileRef = EF696C0A1C4F66DB002CE03F /* UIButton+Dictronary.m */; };
 		EF7CC3D21C0096EA00F176EF /* LYCategoryFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7CC3D11C0096EA00F176EF /* LYCategoryFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF80ACB41C00AFF700EFC749 /* NSObject+Expansion.h in Headers */ = {isa = PBXBuildFile; fileRef = EF80ACB21C00AFF700EFC749 /* NSObject+Expansion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF80ACB51C00AFF700EFC749 /* NSObject+Expansion.m in Sources */ = {isa = PBXBuildFile; fileRef = EF80ACB31C00AFF700EFC749 /* NSObject+Expansion.m */; };
@@ -35,6 +51,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF696C091C4F66DB002CE03F /* UIButton+Dictronary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Dictronary.h"; sourceTree = "<group>"; };
+		EF696C0A1C4F66DB002CE03F /* UIButton+Dictronary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Dictronary.m"; sourceTree = "<group>"; };
 		EF7CC3CE1C0096EA00F176EF /* LYCategoryFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LYCategoryFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7CC3D11C0096EA00F176EF /* LYCategoryFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYCategoryFoundation.h; sourceTree = "<group>"; };
 		EF7CC3D31C0096EA00F176EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,6 +122,8 @@
 		EF7CC3D91C0097E500F176EF /* Categorys */ = {
 			isa = PBXGroup;
 			children = (
+				EF696C091C4F66DB002CE03F /* UIButton+Dictronary.h */,
+				EF696C0A1C4F66DB002CE03F /* UIButton+Dictronary.m */,
 				EF80ACB21C00AFF700EFC749 /* NSObject+Expansion.h */,
 				EF80ACB31C00AFF700EFC749 /* NSObject+Expansion.m */,
 				EF80ACBB1C00B25A00EFC749 /* LYFunctions.h */,
@@ -146,6 +166,7 @@
 				EF80ACD51C00B26600EFC749 /* NSDate+Expansion.h in Headers */,
 				EF80ACDD1C00B26600EFC749 /* UIDevice+Hardware.h in Headers */,
 				EF80ACDF1C00B26600EFC749 /* UIImage+Expansion.h in Headers */,
+				EF696C0B1C4F66DB002CE03F /* UIButton+Dictronary.h in Headers */,
 				EF80ACD31C00B26600EFC749 /* LYHelper.h in Headers */,
 				EF7CC3D21C0096EA00F176EF /* LYCategoryFoundation.h in Headers */,
 				EF80ACD71C00B26600EFC749 /* NSString+Expansion.h in Headers */,
@@ -188,6 +209,9 @@
 					EF7CC3CD1C0096EA00F176EF = {
 						CreatedOnToolsVersion = 7.1.1;
 					};
+					EF9FA2D21C00C54F00DB4CCB = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
 				};
 			};
 			buildConfigurationList = EF7CC3C81C0096EA00F176EF /* Build configuration list for PBXProject "LYCategoryFoundation" */;
@@ -203,6 +227,7 @@
 			projectRoot = "";
 			targets = (
 				EF7CC3CD1C0096EA00F176EF /* LYCategoryFoundation */,
+				EF9FA2D21C00C54F00DB4CCB /* LYCategoryKit */,
 			);
 		};
 /* End PBXProject section */
@@ -216,6 +241,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EF9FA2D61C00C56400DB4CCB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Sets the target folders and the final framework product.\nFMK_NAME=${PROJECT_NAME}\n\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nINSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework\n\n# Working dir will be deleted after the framework creation.\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n\n# -configuration ${CONFIGURATION}\n# Clean and Building both architectures.\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos clean build\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator clean build\n\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\n\nmkdir -p \"${INSTALL_DIR}\"\n\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n\n# Uses the Lipo Tool to merge both binary files (i386 + armv6/armv7) into one Universal final product.\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/${FMK_NAME}\"\n\nrm -r \"${WRK_DIR}\"\n\nopen \"${INSTALL_DIR}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EF7CC3C91C0096EA00F176EF /* Sources */ = {
@@ -231,6 +272,7 @@
 				EF80ACD81C00B26600EFC749 /* NSString+Expansion.m in Sources */,
 				EF80ACDE1C00B26600EFC749 /* UIDevice+Hardware.m in Sources */,
 				EF80ACE21C00B26600EFC749 /* UISlider+TapValueSlider.m in Sources */,
+				EF696C0C1C4F66DB002CE03F /* UIButton+Dictronary.m in Sources */,
 				EF80ACD41C00B26600EFC749 /* LYHelper.m in Sources */,
 				EF80ACE41C00B26600EFC749 /* UIView+Expansion.m in Sources */,
 				EF80ACB51C00AFF700EFC749 /* NSObject+Expansion.m in Sources */,
@@ -362,6 +404,28 @@
 			};
 			name = Release;
 		};
+		EF9FA2D31C00C54F00DB4CCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EF9FA2D41C00C54F00DB4CCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -379,6 +443,15 @@
 			buildConfigurations = (
 				EF7CC3D71C0096EA00F176EF /* Debug */,
 				EF7CC3D81C0096EA00F176EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF9FA2D51C00C54F00DB4CCB /* Build configuration list for PBXAggregateTarget "LYCategoryKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF9FA2D31C00C54F00DB4CCB /* Debug */,
+				EF9FA2D41C00C54F00DB4CCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
