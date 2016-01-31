@@ -1,16 +1,16 @@
 //
-//  UIButton+Dictronary.m
-//  SmartDevice
+//  UIButton+Dictionary.m
+//  LYCategoryFoundation
 //
-//  Created by wei feng on 16/1/15.
+//  Created by wei feng on 16/1/31.
 //  Copyright © 2016年 wei feng. All rights reserved.
 //
 
-#import "UIButton+Dictronary.h"
+#import "UIButton+Dictionary.h"
 
 #define IS_DICT(x) (x) && [(x) isKindOfClass:[NSDictionary class]] && [(x) count] > 0
 
-@implementation UIButton (Dictronary)
+@implementation UIButton (Dictionary)
 
 + (UIButton *)buttonWithNormalDict:(NSDictionary *)normal
 {
@@ -64,7 +64,7 @@
                              other:(NSDictionary *)other
 {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-
+    
     [button configButtonState:UIControlStateNormal withDict:normal];
     [button configButtonState:UIControlStateHighlighted withDict:high];
     [button configButtonState:UIControlStateSelected withDict:selected];
@@ -114,7 +114,7 @@
     }
     [button setImageEdgeInsets:imageEdgeInsets];
     [button setTitleEdgeInsets:titleEdgeInsets];
-
+    
     return button;
 }
 

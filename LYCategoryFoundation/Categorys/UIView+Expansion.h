@@ -11,11 +11,6 @@
 @interface UIView (Expansion)
 
 /*
- 处理旋转
- */
-- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration;
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation;
-/*
  删除所有子视图
  */
 - (void)removeAllSubviews;

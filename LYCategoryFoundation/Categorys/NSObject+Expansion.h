@@ -67,7 +67,7 @@
  */
 - (void)removeListener;
 
-// 获取词典
-- (NSDictionary *)dictionaryValue;
+- (BOOL)isArray;
+- (BOOL)isDictionary;
 
 @end

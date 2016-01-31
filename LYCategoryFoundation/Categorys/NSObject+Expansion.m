@@ -46,15 +46,14 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-#pragma mark
-
-- (NSDictionary *) dictionaryValue
+- (BOOL)isArray
 {
-    if ([self isKindOfClass:[NSDictionary class]]) {
-        return [NSDictionary dictionaryWithDictionary:(NSDictionary *)self];
-    }
-    return nil;
+    return [self isKindOfClass:[NSArray class]];
 }
 
+- (BOOL)isDictionary
+{
+    return [self isKindOfClass:[NSDictionary class]];
+}
 
 @end

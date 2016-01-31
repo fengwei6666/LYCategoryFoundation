@@ -10,7 +10,6 @@
 #import <sys/types.h>
 #import <sys/sysctl.h>
 #import <UIKit/UIKit.h>
-#import "LYFunctions.h"
 
 @implementation LYHelper
 
@@ -25,10 +24,10 @@
     NSURL *ubiq = [[NSFileManager defaultManager]
                    URLForUbiquityContainerIdentifier:nil];
     if (ubiq) {
-        YULog([NSString stringWithFormat:@"iCloud access at %@", ubiq]);
+        NSLog(@"iCloud access at %@", ubiq);
         return YES;
     } else {
-        YULog(@"No iCloud access");
+        NSLog(@"No iCloud access");
         return NO;
     }
 }

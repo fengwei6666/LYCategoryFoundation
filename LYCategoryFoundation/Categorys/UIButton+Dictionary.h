@@ -1,8 +1,8 @@
 //
-//  UIButton+Dictronary.h
-//  SmartDevice
+//  UIButton+Dictionary.h
+//  LYCategoryFoundation
 //
-//  Created by wei feng on 16/1/15.
+//  Created by wei feng on 16/1/31.
 //  Copyright © 2016年 wei feng. All rights reserved.
 //
 
@@ -17,8 +17,7 @@
 #define kImage      @"image"
 #define kBimage     @"bImage"
 
-
-@interface UIButton (Dictronary)
+@interface UIButton (Dictionary)
 
 + (UIButton *)buttonWithNormalDict:(NSDictionary *)normal;
 
