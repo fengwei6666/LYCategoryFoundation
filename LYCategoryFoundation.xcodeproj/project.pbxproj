@@ -66,6 +66,7 @@
 		EF80ACCF1C00B26600EFC749 /* UIView+Expansion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Expansion.m"; sourceTree = "<group>"; };
 		EF80ACD01C00B26600EFC749 /* UIViewController+KNSemiModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KNSemiModal.h"; sourceTree = "<group>"; };
 		EF80ACD11C00B26600EFC749 /* UIViewController+KNSemiModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+KNSemiModal.m"; sourceTree = "<group>"; };
+		EF8BA6891C5DAE9100698473 /* LYCategoryKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYCategoryKit.h; sourceTree = "<group>"; };
 		EFF74F001C5D8DDC00143008 /* UIButton+Dictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Dictionary.h"; sourceTree = "<group>"; };
 		EFF74F011C5D8DDC00143008 /* UIButton+Dictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Dictionary.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +131,7 @@
 				EF80ACCF1C00B26600EFC749 /* UIView+Expansion.m */,
 				EF80ACD01C00B26600EFC749 /* UIViewController+KNSemiModal.h */,
 				EF80ACD11C00B26600EFC749 /* UIViewController+KNSemiModal.m */,
+				EF8BA6891C5DAE9100698473 /* LYCategoryKit.h */,
 			);
 			path = Categorys;
 			sourceTree = "<group>";
