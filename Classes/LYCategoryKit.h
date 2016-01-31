@@ -9,8 +9,6 @@
 #ifndef LYCategoryKit_h
 #define LYCategoryKit_h
 
-#import "UIButton+Di"
-
 #import "LYHelper.h"
 #import "NSDate+Expansion.h"
 #import "NSObject+Expansion.h"
