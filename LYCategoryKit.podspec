@@ -92,7 +92,7 @@ Pod::Spec.new do |s|
   s.source_files  = "LYCategoryFoundation", "LYCategoryFoundation/Categorys/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
-  # s.public_header_files = "LYCategoryFoundation/LYCategoryFoundation.h"
+  # s.public_header_files = ""
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
