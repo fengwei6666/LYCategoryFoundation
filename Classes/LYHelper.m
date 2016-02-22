@@ -75,6 +75,22 @@
     return [[NSUserDefaults standardUserDefaults] objectForKey:key];
 }
 
++ (void)mainThreadExcute:(void (^)())block
+{
+    if ([NSThread isMainThread])
+    {
+        block();
+    }
+    else
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            block();
+        });
+    }
+}
+
+#pragma mark - 歌词
+
 + (NSMutableArray *)lyricFromContentOfFile:(NSString *)path
 {
     NSError *error = nil;
@@ -117,6 +133,90 @@
         return result;
     }
     return nil;
+}
+
+#pragma mark - file 
+
++ (NSString *) appDocumentsDirectory
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                         NSUserDomainMask, YES); //文档目录
+    return [paths objectAtIndex:0];
+}
+
++ (NSString *)appCachesDirectory
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory,
+                                                         NSUserDomainMask, YES);
+    return [paths objectAtIndex:0];
+}
+
++ (NSString *) filePathForDocumentDirectory:(NSString*)fname
+{
+    NSString *dir = [Common appDocumentsDirectory];
+    return [dir stringByAppendingPathComponent:fname];
+}
+
++ (NSString *) filePathForCachesDirectory:(NSString *)fname
+{
+    NSString *dir = [Common appCachesDirectory];
+    return [dir stringByAppendingPathComponent:fname];
+}
+
++ (NSString *) filePathForTempDirectory:(NSString *)fname
+{
+    NSString *dir = NSTemporaryDirectory();
+    return [dir stringByAppendingPathComponent:fname];
+}
+
++ (BOOL)renameFile:(NSString *)filePath NewName:(NSString *)name
+{
+    BOOL result = NO;
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if ([fileManager fileExistsAtPath:filePath])
+    {
+        NSError *error;
+        NSString *toPath = [filePath stringByDeletingLastPathComponent];
+        toPath = [toPath stringByAppendingPathComponent:name];
+        result = [fileManager copyItemAtPath:filePath toPath:toPath error:&error];
+        [fileManager removeItemAtPath:filePath error:&error];
+    }
+    return result;
+}
+
++ (BOOL)deleteFile:(NSString *)filePath
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if ([fileManager fileExistsAtPath:filePath])
+    {
+        NSError *error;
+        return [fileManager removeItemAtPath:filePath error:&error];
+    }
+    return NO;
+}
+
++ (BOOL) deleteDocumentFile:(NSString *)fileName
+{
+    return [Common deleteDocumentFile:[Common filePathForDocumentDirectory:fileName]];
+}
+
++ (NSDictionary *) fileProperty:(NSString *)fileName
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error;
+    return [fileManager attributesOfItemAtPath:fileName error:&error];
+}
+
++ (BOOL) checkIsExistsFile:(NSString *)fileName
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    return [fileManager fileExistsAtPath:fileName];
+}
+
++ (BOOL)creatFile:(NSString *)fileName content:(NSData *)content attributes:(NSDictionary *)attributes
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    return [fileManager createFileAtPath:fileName contents:content attributes:attributes];
 }
 
 @end
