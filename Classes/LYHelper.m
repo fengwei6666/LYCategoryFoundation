@@ -153,13 +153,13 @@
 
 + (NSString *) filePathForDocumentDirectory:(NSString*)fname
 {
-    NSString *dir = [Common appDocumentsDirectory];
+    NSString *dir = [LYHelper appDocumentsDirectory];
     return [dir stringByAppendingPathComponent:fname];
 }
 
 + (NSString *) filePathForCachesDirectory:(NSString *)fname
 {
-    NSString *dir = [Common appCachesDirectory];
+    NSString *dir = [LYHelper appCachesDirectory];
     return [dir stringByAppendingPathComponent:fname];
 }
 
@@ -197,7 +197,7 @@
 
 + (BOOL) deleteDocumentFile:(NSString *)fileName
 {
-    return [Common deleteDocumentFile:[Common filePathForDocumentDirectory:fileName]];
+    return [LYHelper deleteDocumentFile:[LYHelper filePathForDocumentDirectory:fileName]];
 }
 
 + (NSDictionary *) fileProperty:(NSString *)fileName

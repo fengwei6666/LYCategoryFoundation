@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		EF2EC1A41C7B116200A320C6 /* FFLog.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2EC1A31C7B116200A320C6 /* FFLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF7CC3D21C0096EA00F176EF /* LYCategoryFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7CC3D11C0096EA00F176EF /* LYCategoryFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF8BA6A01C5DB21A00698473 /* LYCategoryKit.h in Headers */ = {isa = PBXBuildFile; fileRef = EF8BA68B1C5DB21A00698473 /* LYCategoryKit.h */; };
 		EF8BA6A11C5DB21A00698473 /* LYHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = EF8BA68C1C5DB21A00698473 /* LYHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -46,6 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF2EC1A31C7B116200A320C6 /* FFLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFLog.h; sourceTree = "<group>"; };
 		EF7CC3CE1C0096EA00F176EF /* LYCategoryFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LYCategoryFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7CC3D11C0096EA00F176EF /* LYCategoryFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYCategoryFoundation.h; sourceTree = "<group>"; };
 		EF7CC3D31C0096EA00F176EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				EF8BA68B1C5DB21A00698473 /* LYCategoryKit.h */,
+				EF2EC1A31C7B116200A320C6 /* FFLog.h */,
 				EF8BA68C1C5DB21A00698473 /* LYHelper.h */,
 				EF8BA68D1C5DB21A00698473 /* LYHelper.m */,
 				EF8BA68E1C5DB21A00698473 /* NSDate+Expansion.h */,
@@ -153,6 +156,7 @@
 				EF8BA6A31C5DB21A00698473 /* NSDate+Expansion.h in Headers */,
 				EF8BA6A71C5DB21A00698473 /* NSString+Expansion.h in Headers */,
 				EF8BA6A91C5DB21A00698473 /* UIButton+Dictionary.h in Headers */,
+				EF2EC1A41C7B116200A320C6 /* FFLog.h in Headers */,
 				EF8BA6AB1C5DB21A00698473 /* UIColor+Expansion.h in Headers */,
 				EF8BA6A51C5DB21A00698473 /* NSObject+Expansion.h in Headers */,
 				EF7CC3D21C0096EA00F176EF /* LYCategoryFoundation.h in Headers */,
