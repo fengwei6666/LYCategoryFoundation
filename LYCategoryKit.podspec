@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/fengwei6666/LYCategoryFoundation.git", :tag => "0.1.1" }
+  s.source       = { :git => "https://github.com/fengwei6666/LYCategoryFoundation.git", :tag => s.version, :submodules => true}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -133,4 +133,15 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
 
+  s.subspec 'Common' do |ss|
+  	ss.source_files = 'Classes/Common/*'
+  end
+
+  s.subspec 'Category' do |ss|
+  	ss.source_files = 'Classes/Category/*'
+  end
+
+  s.subspec 'Components' do |ss|
+  	ss.source_files = 'Classes/Components/*'
+  end
 end
