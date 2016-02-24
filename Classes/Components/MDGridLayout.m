@@ -33,15 +33,6 @@
 
 @implementation MDGridLayout
 
-- (void)dealloc
-{
-    self.framesIndexPath = nil;
-    self.whiteSpacesIndexPath = nil;
-    self.constraints = nil;
-    self.firstLayoutIndexPath = nil;
-    [super dealloc];
-}
-
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     if (self = [super initWithCoder:aDecoder])
